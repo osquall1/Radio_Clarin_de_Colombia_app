@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondocelu"
+    android:background="@drawable/fondocelujpg"
     tools:context=".MainActivity">
 
     <!-- Ícono menú -->
@@ -36,13 +36,14 @@
         android:id="@+id/text_en_vivo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="En Vivo"
-        android:textColor="@color/plateado"
+        android:text="Musica - Noticias"
+        android:textColor="@color/black"
         android:textSize="18sp"
         android:layout_marginTop="12dp"
         app:layout_constraintTop_toBottomOf="@id/icon_menu"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="HardcodedText" />
 
     <!-- Logo -->
     <ImageView
@@ -63,7 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="RADIO CLARIN de Colombia"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginTop="24dp"
@@ -76,11 +77,82 @@
         android:id="@+id/play_btn"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/playico"
+        android:src="@drawable/play_ico"
         android:layout_marginTop="32dp"
         app:layout_constraintTop_toBottomOf="@id/text_radio_nombre"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/equalizer_container"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/play_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <View
+            android:id="@+id/bar1"
+            android:layout_width="8dp"
+            android:layout_height="20dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/bar_shape"/>
+
+        <View
+            android:id="@+id/bar2"
+            android:layout_width="8dp"
+            android:layout_height="30dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/bar_shapered"/>
+
+        <View
+            android:id="@+id/bar3"
+            android:layout_width="8dp"
+            android:layout_height="15dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/bar_shape_yellw"/>
+
+        <View
+            android:id="@+id/bar4"
+            android:layout_width="8dp"
+            android:layout_height="25dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/bar_shapeorange"/>
+
+        <View
+            android:id="@+id/bar5"
+            android:layout_width="8dp"
+            android:layout_height="18dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/bar_shape_green"/>
+
+        <View
+            android:id="@+id/bar6"
+            android:layout_width="8dp"
+            android:layout_height="18dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/bar_shapeblue"/>
+
+        <View
+            android:id="@+id/bar7"
+            android:layout_width="8dp"
+            android:layout_height="18dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/bar_shape_violet"/>
+
+
+        <View
+            android:id="@+id/bar8"
+            android:layout_width="8dp"
+            android:layout_height="18dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/bar_shape_black"/>
+
+    </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,8 +4,6 @@ import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 
@@ -16,9 +14,6 @@ import androidx.media3.exoplayer.ExoPlayer;
 
 import android.app.Service;
 import android.os.IBinder;
-import android.telephony.TelephonyManager;
-
-import com.example.radioclarinapp.R;
 
 public class RadioService extends Service {
 
@@ -57,7 +52,7 @@ public class RadioService extends Service {
         Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setContentTitle("Reproduciendo Radio")
                 .setContentText("Escuchando radio en segundo plano...")
-                .setSmallIcon(R.drawable.playico)
+                .setSmallIcon(R.drawable.pause_ico)
                 .setOngoing(true)
                 .build();
         startForeground(1, notification);
