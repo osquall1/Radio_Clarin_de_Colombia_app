@@ -40,4 +40,5 @@ dependencies {
     implementation libs.media3.exoplayer
     implementation libs.annotation
     implementation libs.media
+    implementation libs.material.v1120
 }
