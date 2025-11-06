@@ -17,6 +17,8 @@ import androidx.core.view.GravityCompat;
 import android.net.Uri;
 import java.util.ArrayList;
 import java.util.List;
+import android.app.AlertDialog;
+
 
 public class MainActivity extends AppCompatActivity {
     private ImageView playButton, share;
@@ -84,7 +86,17 @@ public class MainActivity extends AppCompatActivity {
                 intent.setData(Uri.parse("https://www.clarindecolombia.co/"));
                 startActivity(intent);
             } else if (id == R.id.nav_contacto) {
-                // Acción para Contacto
+                new androidx.appcompat.app.AlertDialog.Builder(this)
+                        .setTitle("Politica de privacidad")
+                        .setMessage("- La aplicación no recopila datos personales del usuario como, por ejemplo, nombre, imagen o ubicación.\n" +
+                                "- En consecuencia, la aplicación no comparte ninguna información personal con ninguna otra entidad o con terceros.\n" +
+                                "- The app does not collect personal data from the user, such as name, image, or location.\n" +
+                                "- Consequently, the app does not share any personal information with any other entity or third party.")
+                        .setIcon(R.drawable.ic_info)
+                        .setPositiveButton("OK", (dialog, which) -> dialog.dismiss())
+                        .show();
+
+
             } else if (id == R.id.nav_acerca) {
                 new androidx.appcompat.app.AlertDialog.Builder(this)
                         .setTitle("Acerca de")
@@ -96,7 +108,28 @@ public class MainActivity extends AppCompatActivity {
                         .setPositiveButton("OK", (dialog, which) -> dialog.dismiss())
                         .show();
 
-            }
+            } else if (id == R.id.nav_cerrar) {
+                new AlertDialog.Builder(this)
+                        .setTitle("Cerrar aplicación")
+                        .setMessage("¿Deseas salir de la aplicación?")
+                        .setPositiveButton("Sí", (dialog, which) -> {
+                            // 🔹 Detener el servicio de radio antes de cerrar
+                            Intent stopIntent = new Intent(this, RadioService.class);
+                            stopService(stopIntent);
+
+                            // 🔹 Esperar un instante para liberar correctamente el reproductor
+                            new android.os.Handler().postDelayed(() -> {
+                                finishAffinity(); // Cierra todas las actividades
+                                android.os.Process.killProcess(android.os.Process.myPid());
+                                System.exit(0);
+                            }, 500);
+                        })
+                        .setNegativeButton("Cancelar", null)
+                        .show();
+            } else if (id == R.id.ocultar) {
+                // Acción para Cerrar
+        }
+
             drawerLayout.closeDrawer(GravityCompat.START);
             return true;
         });
@@ -159,5 +192,3 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
-
-

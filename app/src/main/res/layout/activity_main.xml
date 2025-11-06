@@ -21,7 +21,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/icono_menu"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="80dp"
             android:layout_marginTop="16dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -32,7 +32,7 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:src="@drawable/share"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="80dp"
             android:layout_marginTop="16dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -72,7 +72,7 @@
             android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="1dp"
             app:layout_constraintTop_toBottomOf="@id/logo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -83,7 +83,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/play_ico"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="3dp"
             app:layout_constraintTop_toBottomOf="@id/text_radio_nombre"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -95,7 +95,7 @@
             android:layout_height="60dp"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="2dp"
             app:layout_constraintTop_toBottomOf="@id/play_btn"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
@@ -117,7 +117,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="2dp"
             app:layout_constraintTop_toBottomOf="@id/equalizer_container"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
@@ -157,6 +157,19 @@
                 android:layout_margin="8dp"
                 android:src="@drawable/vk_icon"/>
         </LinearLayout>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desarollado por OJMZ"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_marginTop="300dp"
+            app:layout_constraintTop_toBottomOf="@id/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

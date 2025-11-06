@@ -5,11 +5,22 @@
         android:title="Web CLARIN de Colombia"
         android:icon="@drawable/ic_home"/>
     <item
-        android:id="@+id/nav_contacto"
-        android:title="Contacto"
-        android:icon="@drawable/ic_contac"/>
-    <item
         android:id="@+id/nav_acerca"
-        android:title="Acerca de"
+        android:title="Acerca de nosotros"
         android:icon="@drawable/ic_info"/>
+
+    <item
+        android:id="@+id/nav_contacto"
+        android:title="Politica de Privacidad"
+        android:icon="@drawable/ic_contac"/>
+
+    <item
+        android:id="@+id/ocultar"
+        android:title="Ocultar"
+        android:icon="@drawable/left_panel_close"/>
+
+    <item
+        android:id="@+id/nav_cerrar"
+        android:title="Cerrar aplicación"
+        android:icon="@drawable/exit_ico" />
 </menu>

@@ -65,9 +65,16 @@ public class RadioService extends Service {
     public void onDestroy() {
         super.onDestroy();
         if (player != null) {
+            if (player.isPlaying()) {
+                player.stop();
+            }
             player.release();
+            player = null;
         }
         stopForeground(true);
+        stopSelf();
     }
+
+
 
 }
